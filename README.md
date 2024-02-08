@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+React Version 18.2.0
+TypeScript Version 5.3.3
+
 ## Currently being built:
 
 1. Homepage
