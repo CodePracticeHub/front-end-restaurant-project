@@ -1,7 +1,12 @@
 import "./App.css";
 import React from "react";
+import HeaderNav from "./react-components/header.tsx";
 function App() {
-  return <></>;
+  return (
+    <>
+      <HeaderNav />
+    </>
+  );
 }
 
 export default App;
