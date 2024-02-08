@@ -30,7 +30,7 @@ $josefin_sans: "Josefin Sans", sans-serif;
   &--section {
     text-transform: uppercase;
     font: {
-      family: $josefin_sans;
+      family: $lato;
       weight: 700;
     }
     display: flex;
@@ -39,6 +39,7 @@ $josefin_sans: "Josefin Sans", sans-serif;
       display: flex;
       align-items: center;
       column-gap: 2rem;
+      height: 2rem;
       li {
         font-size: 1rem;
         list-style: none;
@@ -60,7 +61,7 @@ $josefin_sans: "Josefin Sans", sans-serif;
       align-items: center;
       color: white;
       #sign-in {
-        padding: 0.8rem 1.5rem 0.7rem;
+        padding: 0.8rem 1.5rem;
         background: $black;
         color: white;
         border-radius: 2rem;
