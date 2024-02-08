@@ -1,3 +1,4 @@
+// cd src/react-components
 //sass --watch header.scss header.css
 
 //lato import
@@ -28,8 +29,10 @@ $josefin_sans: "Josefin Sans", sans-serif;
   height: 7rem;
   &--section {
     text-transform: uppercase;
-    font-family: $josefin_sans;
-    font-weight: 700;
+    font: {
+      family: $josefin_sans;
+      weight: 700;
+    }
     display: flex;
 
     ul {
@@ -37,7 +40,9 @@ $josefin_sans: "Josefin Sans", sans-serif;
       align-items: center;
       column-gap: 2rem;
       li {
+        font-size: 1rem;
         list-style: none;
+        text-decoration: none;
         &:hover {
           text-decoration: underline;
           cursor: pointer;
@@ -55,7 +60,7 @@ $josefin_sans: "Josefin Sans", sans-serif;
       align-items: center;
       color: white;
       #sign-in {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.5rem 0.7rem;
         background: $black;
         color: white;
         border-radius: 2rem;

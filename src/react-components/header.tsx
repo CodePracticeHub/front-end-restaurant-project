@@ -23,7 +23,6 @@ const HeaderNav: React.FC = () => {
           <li>menu</li>
           <li>events</li>
           <li>about us</li>
-
           <li id="sign-in">
             <span>sign in</span>
           </li>

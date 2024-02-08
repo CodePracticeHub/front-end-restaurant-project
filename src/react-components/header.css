@@ -22,7 +22,9 @@
   column-gap: 2rem;
 }
 .nav--section ul li {
+  font-size: 1rem;
   list-style: none;
+  text-decoration: none;
 }
 .nav--section ul li:hover {
   text-decoration: underline;
@@ -40,7 +42,7 @@
   color: white;
 }
 .nav--section-bottom #sign-in {
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.5rem 0.7rem;
   background: #111114;
   color: white;
   border-radius: 2rem;
