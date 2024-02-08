@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.nav {
+  height: 7rem;
+}
+.nav--section {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+}
+.nav--section ul {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.nav--section ul li {
+  list-style: none;
+}
+.nav--section ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.nav--section-top {
+  height: 30%;
+  justify-content: flex-end;
+}
+.nav--section-bottom {
+  height: 70%;
+  background: #79040a;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.nav--section-bottom #sign-in {
+  padding: 0.8rem 1.5rem;
+  background: #111114;
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}
+.nav--section-bottom #sign-in span {
+  height: auto;
+}
+.nav--section-bottom #sign-in:hover {
+  background: white;
+  color: #111114;
+}
+
+/*# sourceMappingURL=header.css.map */
