@@ -9,6 +9,12 @@ TypeScript Version 5.3.3
 
 1. Homepage
 
+## To work on this repository please
+
+1. `git clone https://github.com/SpringBootDevs/front-end-restaurant-project.git `
+
+2. add a branch with your name, git push to your branch and git pull request
+
 ## Please see Figma Design Sheet here:
 
 [Figma Design Sheet](https://www.figma.com/file/vvbg8rGKQmjyJRg6HJj0Hp/Restaurant-Project-Code%2FDesign?type=design&node-id=0%3A1&mode=design&t=VEtdw8Nun2RSvk55-1)
