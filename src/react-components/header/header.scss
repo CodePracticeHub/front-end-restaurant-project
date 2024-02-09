@@ -1,24 +1,7 @@
 // cd src/react-components
-//sass --watch header.scss header.css
+//sass --watch src/react-components/header/header.scss src/react-components/header/header.css
 
-//lato import
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
-
-// josefin sans import
-
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap");
-
-//color scheme
-
-$dark_red: #79040a;
-$black: #111114;
-$yellow: #fdce6e;
-
-//fonts
-
-$lato: "Lato", sans-serif;
-$josefin_sans: "Josefin Sans", sans-serif;
-
+@use "../variables.scss";
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +13,7 @@ $josefin_sans: "Josefin Sans", sans-serif;
   &--section {
     text-transform: uppercase;
     font: {
-      family: $lato;
+      family: variables.$lato;
       weight: 700;
     }
     display: flex;
@@ -53,16 +36,17 @@ $josefin_sans: "Josefin Sans", sans-serif;
     &-top {
       height: 30%;
       justify-content: flex-end;
+      padding-right: 1rem;
     }
     &-bottom {
       height: 70%;
-      background: $dark_red;
+      background: variables.$dark_red;
       justify-content: space-evenly;
       align-items: center;
       color: white;
       #sign-in {
         padding: 0.8rem 1.5rem;
-        background: $black;
+        background: variables.$black;
         color: white;
         border-radius: 2rem;
         display: flex;
@@ -72,9 +56,45 @@ $josefin_sans: "Josefin Sans", sans-serif;
         }
         &:hover {
           background: white;
-          color: $black;
+          color: variables.$black;
         }
       }
+    }
+
+    &-dropdown {
+      display: none;
+      width: 100%;
+      height: 20rem;
+      background: variables.$dark_red;
+      color: white;
+      justify-content: center;
+      align-items: flex-start;
+
+      ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav--section {
+    &-top {
+      ul {
+        column-gap: 1rem;
+      }
+    }
+    &-bottom {
+      justify-content: space-between;
+      padding: 0 1rem;
+      ul {
+        display: none;
+      }
+    }
+    &-dropdown {
+      display: flex;
     }
   }
 }

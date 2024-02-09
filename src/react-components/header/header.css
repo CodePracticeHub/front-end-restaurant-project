@@ -34,6 +34,7 @@
 .nav--section-top {
   height: 30%;
   justify-content: flex-end;
+  padding-right: 1rem;
 }
 .nav--section-bottom {
   height: 70%;
@@ -56,6 +57,36 @@
 .nav--section-bottom #sign-in:hover {
   background: white;
   color: #111114;
+}
+.nav--section-dropdown {
+  display: none;
+  width: 100%;
+  height: 20rem;
+  background: #79040a;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+}
+.nav--section-dropdown ul {
+  margin-top: 1rem;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav--section-top ul {
+    column-gap: 1rem;
+  }
+  .nav--section-bottom {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .nav--section-bottom ul {
+    display: none;
+  }
+  .nav--section-dropdown {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap");
+.hamburger {
+  display: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0.2rem solid white;
+  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hamburger:hover {
+  cursor: pointer;
+  background: white;
+}
+.hamburger:hover div {
+  border-bottom: 0.1rem solid #111114;
+}
+.hamburger__line {
+  transform: translateY(0.4rem);
+  width: 50%;
+  height: 0.6rem;
+  border-bottom: 0.1rem solid white;
+}
+
+@media only screen and (max-width: 1100px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=hamburger.css.map */
