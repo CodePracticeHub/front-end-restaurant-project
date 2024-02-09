@@ -14,9 +14,6 @@ const List: React.FC<listArrayType> = ({ listName, listArray }) => {
   );
 };
 
-const LogoAndButtons = () => {
-  return <></>;
-};
 const Footer = () => {
   return (
     <footer className="footer">

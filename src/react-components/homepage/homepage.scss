@@ -1,0 +1,121 @@
+@use "../variables.scss";
+//sass --watch src/react-components/homepage/homepage.scss src/react-components/homepage/homepage.css
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.homepage {
+  font-family: variables.$josefin_sans;
+  @include flex-column();
+  row-gap: 1rem;
+
+  &--welcome {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    row-gap: 0.4rem;
+    color: white;
+    text-align: center;
+    img {
+      min-width: 60%;
+    }
+
+    &-text {
+      position: absolute;
+      height: 100%;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      font-size: 1rem;
+      h1 {
+        font-size: 3.8vw;
+      }
+      h2 {
+        font-size: 3vw;
+      }
+      h3 {
+        font-size: 2vw;
+      }
+      p {
+        font-size: 2.3vw;
+        font-weight: 300;
+        font-family: variables.$lato;
+        width: 80%;
+      }
+    }
+  }
+  &--carousel {
+    @include flex-column();
+    align-items: center;
+    row-gap: 1rem;
+    h2 {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+
+    &-caption {
+      padding: 1rem;
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+    &:first-child {
+      background: variables.$dark_red;
+    }
+    &:nth-child(2) {
+      background: variables.$black;
+    }
+
+    img {
+      height: auto;
+      width: 10rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .homepage {
+    &--new {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--card {
+      padding: 0;
+      width: 70%;
+      flex-direction: row;
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

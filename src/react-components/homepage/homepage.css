@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.homepage--welcome {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  row-gap: 0.4rem;
+  color: white;
+  text-align: center;
+}
+.homepage--welcome img {
+  min-width: 60%;
+}
+.homepage--welcome-text {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 1rem;
+}
+.homepage--welcome-text h1 {
+  font-size: 3.8vw;
+}
+.homepage--welcome-text h2 {
+  font-size: 3vw;
+}
+.homepage--welcome-text h3 {
+  font-size: 2vw;
+}
+.homepage--welcome-text p {
+  font-size: 2.3vw;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  width: 80%;
+}
+.homepage--carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+.homepage--carousel h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.homepage--carousel h3 {
+  font-size: 1.5rem;
+}
+.homepage--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+}
+.homepage--card-caption {
+  padding: 1rem;
+}
+.homepage--card-caption h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.homepage--card:first-child {
+  background: #79040a;
+}
+.homepage--card:nth-child(2) {
+  background: #111114;
+}
+.homepage--card img {
+  height: auto;
+  width: 10rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .homepage--new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage--card {
+    padding: 0;
+    width: 70%;
+    flex-direction: row;
+  }
+  .homepage--card:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .homepage--card img {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=homepage.css.map */
