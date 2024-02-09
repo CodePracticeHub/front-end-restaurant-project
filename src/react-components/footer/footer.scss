@@ -1,0 +1,56 @@
+@use "../variables.scss";
+//sass --watch src/react-components/footer/footer.scss src/react-components/footer/footer.css
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: variables.$black;
+  padding: 2rem 0;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: variables.$lato;
+  font-weight: 700;
+  @include flex-column;
+  align-items: center;
+  text-align: left;
+  row-gap: 3rem;
+  ul {
+    list-style: none;
+  }
+
+  &--list {
+    width: 11rem;
+
+    text-transform: uppercase;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      li {
+        font-size: 0.9rem;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &--logo-and-buttons {
+    @include flex-column;
+    row-gap: 1rem;
+  }
+  &--icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 10%;
+  }
+}

@@ -34,26 +34,28 @@ const HeaderNav: React.FC = () => {
   };
 
   return (
-    <nav className="nav">
-      <section className="nav--section nav--section-top">
-        <ul>
-          <li>search</li>
-          <li>f.a.q</li>
-          <li>contact us: 9867654321</li>
-        </ul>
-      </section>
-      <section className="nav--section nav--section-bottom">
-        <picture>
-          <img
-            src={require("../../images/logo-steakbuds-1000-x-285-20.png")}
-            alt=""
-          />
-        </picture>
-        <HeaderList />
-        <Hamburger changeColor={toggleDropdown} onClick={ClickHandler} />
-      </section>
-      <Dropdown toggle={toggleDropdown} />
-    </nav>
+    <header>
+      <nav className="nav">
+        <section className="nav--section nav--section-top">
+          <ul>
+            <li>search</li>
+            <li>f.a.q</li>
+            <li>contact us: 9867654321</li>
+          </ul>
+        </section>
+        <section className="nav--section nav--section-bottom">
+          <picture>
+            <img
+              src={require("../../images/logo-steakbuds-1000-x-285-20.png")}
+              alt="logo"
+            />
+          </picture>
+          <HeaderList />
+          <Hamburger changeColor={toggleDropdown} onClick={ClickHandler} />
+        </section>
+        <Dropdown toggle={toggleDropdown} />
+      </nav>
+    </header>
   );
 };
 
