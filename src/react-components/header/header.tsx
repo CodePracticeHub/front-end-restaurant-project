@@ -23,6 +23,13 @@ const HeaderNav: React.FC = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const ClickHandler = () => {
     setToggleDropdown(!toggleDropdown);
+    // const getHamburger: Element | null =
+    //   document.getElementsByClassName("hamburger")[0];
+    // if (!toggleDropdown) {
+    //   (getHamburger as HTMLElement).style.background = "white";
+    // } else {
+    //   (getHamburger as HTMLElement).style.background = "red";
+    // }
     return toggleHamburgerClicked;
   };
 
@@ -43,7 +50,7 @@ const HeaderNav: React.FC = () => {
           />
         </picture>
         <HeaderList />
-        <Hamburger onClick={ClickHandler} />
+        <Hamburger changeColor={toggleDropdown} onClick={ClickHandler} />
       </section>
       <Dropdown toggle={toggleDropdown} />
     </nav>

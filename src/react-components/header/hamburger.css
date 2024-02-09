@@ -23,6 +23,15 @@
   height: 0.6rem;
   border-bottom: 0.1rem solid white;
 }
+.hamburger__line--cross {
+  transform-origin: bottom center;
+}
+.hamburger__line--cross--left {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+.hamburger__line--cross--right {
+  transform: translateY(1rem) rotate(-45deg);
+}
 
 @media only screen and (max-width: 1100px) {
   .hamburger {
