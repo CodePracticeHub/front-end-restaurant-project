@@ -45,10 +45,7 @@ const HeaderNav: React.FC = () => {
         </section>
         <section className="nav--section nav--section-bottom">
           <picture>
-            <img
-              src={require("../../images/logo-steakbuds-1000-x-285-20.png")}
-              alt="logo"
-            />
+            <img src="./images/logo-steakbuds-1000-x-285-20.png" alt="logo" />
           </picture>
           <HeaderList />
           <Hamburger changeColor={toggleDropdown} onClick={ClickHandler} />

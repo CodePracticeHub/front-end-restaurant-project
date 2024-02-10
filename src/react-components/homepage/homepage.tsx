@@ -29,10 +29,7 @@ const Homepage = () => {
   return (
     <main className="homepage">
       <section className="homepage--welcome">
-        <img
-          src={require("../../images/rectangle-1690.png")}
-          alt="wine table"
-        />
+        <img src="./images/rectangle-1690.png" alt="wine table" />
         <div className="homepage--welcome-text">
           <h1>Welcome to Steakbuds</h1>
           <h2>where culinary excelence meets warm hospitality!</h2>
@@ -51,23 +48,20 @@ const Homepage = () => {
       </section>
       <section className="homepage--new">
         <Card
-          photosrc={require("../../images/rectangle-1730.png")}
+          photosrc="./images/rectangle-1730.png"
           alt="rice dish"
           subtitle="new veg cuisines"
           description="Indulge in our thoughtfully curated menu featuring an array of plant-based delights, from hearty salads and savory starters to mouthwatering mains and decadent desserts. Whether you're a committed vegetarian or simply seeking a delicious and nutritious meal, Veggie Haven offers something for everyone."
         ></Card>
         <Card
-          photosrc={require("../../images/rectangle-1740.png")}
+          photosrc="./images/rectangle-1740.png"
           alt="pork ribs"
           subtitle="new specials"
           description="Discover our latest specials at Steakbuds! Indulge in Surf & Turf, Vegetarian Delight, Wine & Dine, or Around the World flavors. From succulent steak to vibrant vegetarian dishes and expertly paired wines, our specials promise a memorable culinary journey for every palate."
         ></Card>
       </section>
       <section className="homepage--book">
-        <img
-          src={require("../../images/rectangle-1691.png")}
-          alt="reservation table"
-        />
+        <img src="./images/rectangle-1691.png" alt="reservation table" />
         <div className="homepage--book-text">
           {" "}
           <h2>experience exception dining with us </h2>

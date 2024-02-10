@@ -18,25 +18,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <section className="footer--logo-and-buttons">
-        <img
-          src={require("../../images/logo-steakbuds-1000-x-285-20.png")}
-          alt="logo"
-        />
+        <img src="./images/logo-steakbuds-1000-x-285-20.png" alt="logo" />
         <div className="footer--icons">
-          <img
-            src={require("../../images/facebook-logo0.png")}
-            alt="facebook"
-          />
-          <img
-            src={require("../../images/instagram-logo0.png")}
-            alt="instagram"
-          />
-          <img src={require("../../images/twitter-logo0.png")} alt="twitter" />
-          <img src={require("../../images/youtube-logo0.png")} alt="youtube" />
-          <img
-            src={require("../../images/linked-in-logo0.png")}
-            alt="linkedin"
-          />
+          <img src="./images/facebook-logo0.png" alt="facebook" />
+          <img src="./images/instagram-logo0.png" alt="instagram" />
+          <img src="./images/twitter-logo0.png" alt="twitter" />
+          <img src="./images/youtube-logo0.png" alt="youtube" />
+          <img src="./images/linked-in-logo0.png" alt="linkedin" />
         </div>
         <List
           listName="footer--contacts"
