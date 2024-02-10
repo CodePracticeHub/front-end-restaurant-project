@@ -151,6 +151,7 @@
 @media only screen and (min-width: 750px) {
   .homepage {
     row-gap: 2rem;
+
     h1 {
       font-size: 3.8vw;
     }
@@ -161,11 +162,18 @@
       font-size: 2vw;
     }
     p {
-      font-size: 1.1vw;
+      font-size: 45%;
     }
     &--welcome {
+      &-text {
+        font-size: 2.7vw;
+      }
+      h2 {
+        line-height: 3rem;
+      }
       p {
         width: 50%;
+        line-height: 1.5rem;
       }
       img {
         width: 70%;
@@ -181,6 +189,7 @@
       width: 70%;
       height: 30rem;
       flex-direction: row;
+
       &:nth-child(1) {
         flex-direction: row-reverse;
         div h2 {
@@ -195,6 +204,7 @@
         }
       }
       &-caption {
+        font-size: 2.7vw;
         padding: 10%;
         width: 50%;
       }
@@ -208,15 +218,19 @@
       margin-bottom: 2rem;
       &-text {
         align-items: center;
+        font-size: 2.7vw;
       }
       h2 {
         width: 60%;
+        line-height: 3rem;
       }
       img {
         width: 70%;
       }
       p {
         width: 50%;
+        font-size: 50%;
+        line-height: 1.5rem;
       }
       button {
         width: 20%;

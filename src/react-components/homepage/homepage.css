@@ -153,10 +153,17 @@
     font-size: 2vw;
   }
   .homepage p {
-    font-size: 1.1vw;
+    font-size: 45%;
+  }
+  .homepage--welcome-text {
+    font-size: 2.7vw;
+  }
+  .homepage--welcome h2 {
+    line-height: 3rem;
   }
   .homepage--welcome p {
     width: 50%;
+    line-height: 1.5rem;
   }
   .homepage--welcome img {
     width: 70%;
@@ -184,6 +191,7 @@
     text-align: right;
   }
   .homepage--card-caption {
+    font-size: 2.7vw;
     padding: 10%;
     width: 50%;
   }
@@ -197,15 +205,19 @@
   }
   .homepage--book-text {
     align-items: center;
+    font-size: 2.7vw;
   }
   .homepage--book h2 {
     width: 60%;
+    line-height: 3rem;
   }
   .homepage--book img {
     width: 70%;
   }
   .homepage--book p {
     width: 50%;
+    font-size: 50%;
+    line-height: 1.5rem;
   }
   .homepage--book button {
     width: 20%;
