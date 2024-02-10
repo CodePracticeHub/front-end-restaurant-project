@@ -37,6 +37,11 @@
   color: white;
   text-align: center;
 }
+.homepage--welcome img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
 .homepage--welcome-text {
   position: absolute;
   height: 100%;
@@ -101,6 +106,11 @@
   align-items: center;
   justify-content: center;
 }
+.homepage--book img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
 .homepage--book h2 {
   text-transform: uppercase;
   text-align: center;
@@ -129,7 +139,10 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 750px) {
+  .homepage {
+    row-gap: 2rem;
+  }
   .homepage h1 {
     font-size: 3.8vw;
   }
@@ -140,10 +153,13 @@
     font-size: 2vw;
   }
   .homepage p {
-    font-size: 1.5vw;
-    font-weight: 300;
-    font-family: "Lato", sans-serif;
-    width: 80%;
+    font-size: 1.1vw;
+  }
+  .homepage--welcome p {
+    width: 50%;
+  }
+  .homepage--welcome img {
+    width: 70%;
   }
   .homepage--new {
     display: flex;
@@ -153,13 +169,46 @@
   .homepage--card {
     padding: 0;
     width: 70%;
+    height: 30rem;
     flex-direction: row;
   }
-  .homepage--card:nth-child(2) {
+  .homepage--card:nth-child(1) {
     flex-direction: row-reverse;
+  }
+  .homepage--card:nth-child(1) div h2 {
+    width: 100%;
+    text-align: left;
+  }
+  .homepage--card:nth-child(2) div h2 {
+    width: 100%;
+    text-align: right;
+  }
+  .homepage--card-caption {
+    padding: 10%;
+    width: 50%;
   }
   .homepage--card img {
     width: 50%;
+    height: inherit;
+    object-fit: cover;
+  }
+  .homepage--book {
+    margin-bottom: 2rem;
+  }
+  .homepage--book-text {
+    align-items: center;
+  }
+  .homepage--book h2 {
+    width: 60%;
+  }
+  .homepage--book img {
+    width: 70%;
+  }
+  .homepage--book p {
+    width: 50%;
+  }
+  .homepage--book button {
+    width: 20%;
   }
 }
 

@@ -42,6 +42,9 @@
     color: white;
     text-align: center;
     img {
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
     }
 
     &-text {
@@ -110,6 +113,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    img {
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
+    }
     h2 {
       text-transform: uppercase;
       text-align: center;
@@ -140,8 +148,9 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 750px) {
   .homepage {
+    row-gap: 2rem;
     h1 {
       font-size: 3.8vw;
     }
@@ -152,10 +161,15 @@
       font-size: 2vw;
     }
     p {
-      font-size: 1.5vw;
-      font-weight: 300;
-      font-family: variables.$lato;
-      width: 80%;
+      font-size: 1.1vw;
+    }
+    &--welcome {
+      p {
+        width: 50%;
+      }
+      img {
+        width: 70%;
+      }
     }
     &--new {
       display: flex;
@@ -165,13 +179,47 @@
     &--card {
       padding: 0;
       width: 70%;
+      height: 30rem;
       flex-direction: row;
-      &:nth-child(2) {
+      &:nth-child(1) {
         flex-direction: row-reverse;
+        div h2 {
+          width: 100%;
+          text-align: left;
+        }
       }
-
+      &:nth-child(2) {
+        div h2 {
+          width: 100%;
+          text-align: right;
+        }
+      }
+      &-caption {
+        padding: 10%;
+        width: 50%;
+      }
       img {
         width: 50%;
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+    &--book {
+      margin-bottom: 2rem;
+      &-text {
+        align-items: center;
+      }
+      h2 {
+        width: 60%;
+      }
+      img {
+        width: 70%;
+      }
+      p {
+        width: 50%;
+      }
+      button {
+        width: 20%;
       }
     }
   }
