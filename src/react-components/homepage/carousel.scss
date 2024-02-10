@@ -1,0 +1,111 @@
+//sass --watch src/react-components/homepage/carousel.scss src/react-components/homepage/carousel.css
+@use "../variables.scss" as *;
+
+.homepage {
+  &--carousel {
+    &-slide,
+    &-images {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+
+    &-arrow {
+      width: 1rem;
+      height: 1rem;
+
+      transform: rotate(45deg);
+      &:hover {
+        cursor: pointer;
+      }
+
+      &-left {
+        border: {
+          left: 0.2rem solid $black;
+          bottom: 0.2rem solid $black;
+        }
+      }
+      &-right {
+        border: {
+          right: 0.2rem solid $black;
+          top: 0.2rem solid $black;
+        }
+      }
+    }
+    &-star-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: $black;
+      padding: 0.8rem;
+      border-radius: 1rem;
+      color: white;
+      font-family: $lato;
+      font-size: 2rem;
+      row-gap: 0.5rem;
+      p {
+        font-weight: 700;
+      }
+    }
+    &-rating {
+      display: flex;
+      align-items: center;
+      font-size: inherit;
+      column-gap: 0.5rem;
+    }
+    &-order-button {
+      width: 80%;
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 1rem 0.5rem;
+      color: $dark_red;
+      border: none;
+      border-radius: 1rem;
+      background: white;
+      &:hover {
+        background: $dark_red;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 750px) {
+  .homepage {
+    &--carousel {
+      &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $black;
+        padding: 0.8rem;
+        border-radius: 1rem;
+        color: white;
+        font-family: $lato;
+        font-size: 2rem;
+        row-gap: 0.5rem;
+        p {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+/*       <section className="homepage--carousel-item">
+            <img src={image} alt={altArray[index]} />
+            <p>{altArray[index]}</p>
+            <div className="homepage--carousel-rating">
+              <img
+                className="homepage--carousel-star-icon"
+                src="./icons/star.svg"
+                alt="star"
+              />
+              <p>`${ratingArray}/5`</p>
+            </div>
+            <button className="homepage--carousel-order-button">Order</button>
+          </section>*/

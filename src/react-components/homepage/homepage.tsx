@@ -1,5 +1,6 @@
 import React from "react";
 import "./homepage.css";
+import Carousel from "./carousel.tsx";
 interface CardProps {
   photosrc: any;
   subtitle: string;
@@ -46,7 +47,7 @@ const Homepage = () => {
       <section className="homepage--carousel">
         <h3>Reactivate the carnival in you</h3>
         <h2>re-steak yourself!</h2>
-        {/* Add carousel here */}
+        <Carousel />
       </section>
       <section className="homepage--new">
         <Card
@@ -76,10 +77,9 @@ const Homepage = () => {
             to enjoy our delicious fare from the comfort of your home? Simply
             place your order online and let us bring the flavors of Steakbuds to
             your doorstep.
-          </p>  
+          </p>
           <button className="homepage--book-button">Book a table</button>
         </div>
-      
       </section>
     </main>
   );
