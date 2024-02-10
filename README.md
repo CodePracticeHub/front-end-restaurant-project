@@ -15,6 +15,8 @@ TypeScript Version 5.3.3
 
 2. add a branch with your name, git push to your branch and git pull request
 
+3. Put all your work in a folder, folder names all in lowercase please e.g. if you are doing the sign up page, put it all under a folder called "signup"
+
 ## Please see Figma Design Sheet here:
 
 [Figma Design Sheet](https://www.figma.com/file/vvbg8rGKQmjyJRg6HJj0Hp/Restaurant-Project-Code%2FDesign?type=design&node-id=0%3A1&mode=design&t=VEtdw8Nun2RSvk55-1)
