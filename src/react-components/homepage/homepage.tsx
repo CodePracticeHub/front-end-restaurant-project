@@ -63,15 +63,23 @@ const Homepage = () => {
         ></Card>
       </section>
       <section className="homepage--book">
-        {/* <img src="../../images/rectangle-1691.png" alt="wine table" /> */}
-        <h2>experience exception dining with us </h2>
-        <p>
-          Planning a special evening? Take advantage of our convenient in
-          advance reservations to ensure a seamless dining experience. Prefer to
-          enjoy our delicious fare from the comfort of your home? Simply place
-          your order online and let us bring the flavors of Steakbuds to your
-          doorstep.
-        </p>
+        <img
+          src={require("../../images/rectangle-1691.png")}
+          alt="reservation table"
+        />
+        <div className="homepage--book-text">
+          {" "}
+          <h2>experience exception dining with us </h2>
+          <p>
+            Planning a special evening? Take advantage of our convenient in
+            advance reservations to ensure a seamless dining experience. Prefer
+            to enjoy our delicious fare from the comfort of your home? Simply
+            place your order online and let us bring the flavors of Steakbuds to
+            your doorstep.
+          </p>  
+          <button className="homepage--book-button">Book a table</button>
+        </div>
+      
       </section>
     </main>
   );

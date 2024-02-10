@@ -79,6 +79,9 @@
   .nav--section-top ul {
     column-gap: 1rem;
   }
+  .nav--section-top ul li {
+    font-size: 0.75rem;
+  }
   .nav--section-bottom {
     justify-content: space-between;
     padding: 0 1rem;

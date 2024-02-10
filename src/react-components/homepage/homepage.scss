@@ -1,5 +1,7 @@
 @use "../variables.scss";
 //sass --watch src/react-components/homepage/homepage.scss src/react-components/homepage/homepage.css
+
+//responsive design - phone first
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,22 @@
 .homepage {
   font-family: variables.$josefin_sans;
   @include flex-column();
-  row-gap: 1rem;
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+  p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+    text-align: justify;
+  }
 
   &--welcome {
     width: 100%;
@@ -25,13 +42,12 @@
     color: white;
     text-align: center;
     img {
-      min-width: 60%;
     }
 
     &-text {
       position: absolute;
       height: 100%;
-      width: 70%;
+      width: 90%;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
@@ -39,33 +55,17 @@
       align-items: center;
       z-index: 1;
       font-size: 1rem;
-      h1 {
-        font-size: 3.8vw;
-      }
-      h2 {
-        font-size: 3vw;
-      }
-      h3 {
-        font-size: 2vw;
-      }
       p {
-        font-size: 2.3vw;
-        font-weight: 300;
-        font-family: variables.$lato;
-        width: 80%;
+        width: 88%;
       }
     }
   }
   &--carousel {
     @include flex-column();
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 0.6rem;
     h2 {
       text-transform: uppercase;
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1.5rem;
     }
   }
 
@@ -73,15 +73,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2rem 1.7rem;
     color: white;
 
     &-caption {
-      padding: 1rem;
+      padding: 2rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       h2 {
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 1rem;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.7rem;
       }
     }
     &:first-child {
@@ -96,10 +103,60 @@
       width: 10rem;
     }
   }
+  &--book {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-text {
+      row-gap: 1rem;
+      flex-direction: column;
+      display: flex;
+      width: 80%;
+      position: absolute;
+    }
+    &-button {
+      margin-top: 0.5rem;
+      background: variables.$dark_red;
+      border: none;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      color: white;
+      &:hover {
+        background: white;
+        color: variables.$black;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .homepage {
+    h1 {
+      font-size: 3.8vw;
+    }
+    h2 {
+      font-size: 2.7vw;
+    }
+    h3 {
+      font-size: 2vw;
+    }
+    p {
+      font-size: 1.5vw;
+      font-weight: 300;
+      font-family: variables.$lato;
+      width: 80%;
+    }
     &--new {
       display: flex;
       flex-direction: column;

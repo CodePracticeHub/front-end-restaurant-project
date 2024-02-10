@@ -86,6 +86,9 @@
     &-top {
       ul {
         column-gap: 1rem;
+        li {
+          font-size: 0.75rem;
+        }
       }
     }
     &-bottom {
