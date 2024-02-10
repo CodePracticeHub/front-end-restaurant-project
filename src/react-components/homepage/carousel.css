@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap");
-.homepage--carousel-slide, .homepage--carousel-images {
+.homepage--carousel {
+  margin: 1.5rem 0;
+}
+.homepage--carousel h2 {
+  font-size: 1.8rem;
+}
+.homepage--carousel-slide, .homepage--carousel-chunk-high, .homepage--carousel-chunk-low {
   display: flex;
   align-items: center;
   column-gap: 1rem;
 }
+.homepage--carousel-images {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
 .homepage--carousel-arrow {
   width: 1rem;
   height: 1rem;
+  display: none;
   transform: rotate(45deg);
 }
 .homepage--carousel-arrow:hover {
@@ -61,8 +73,32 @@
   color: white;
   cursor: pointer;
 }
+.homepage--carousel-chunk-high {
+  display: none;
+}
+.homepage--carousel-chunk-low {
+  padding: 0 0.5rem;
+}
+.homepage--carousel-chunk-low img {
+  width: 100%;
+}
 
 @media only screen and (min-width: 750px) {
+  .homepage--carousel {
+    margin: 0;
+  }
+  .homepage--carousel-arrow {
+    display: flex;
+  }
+  .homepage--carousel h2 {
+    font-size: 2.7vw;
+  }
+  .homepage--carousel-chunk-high {
+    display: flex;
+  }
+  .homepage--carousel-chunk-low {
+    display: none;
+  }
   .homepage--carousel-item {
     display: flex;
     flex-direction: column;
