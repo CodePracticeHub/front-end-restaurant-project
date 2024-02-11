@@ -13,9 +13,13 @@ TypeScript Version 5.3.3
 
 1. `git clone https://github.com/SpringBootDevs/front-end-restaurant-project.git `
 
-2. add a branch with your name, git push to your branch and git pull request
+2. `npm install`
 
-3. Put all your work in a folder, folder names all in lowercase please e.g. if you are doing the sign up page, put it all under a folder called "signup"
+3. `npm start` to see the website
+
+4. add a branch with your name on the repository, git push to your branch and git pull request
+
+5. Put all your work in a folder, folder names all in lowercase please e.g. if you are doing the sign up page, put it all under a folder called "signup"
 
 ## Please see Figma Design Sheet here:
 
