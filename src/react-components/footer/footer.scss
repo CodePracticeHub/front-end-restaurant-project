@@ -1,16 +1,16 @@
-@use "../variables.scss";
+@use "../variables.scss" as *;
 //sass --watch src/react-components/footer/footer.scss src/react-components/footer/footer.css
 @mixin flex-column {
   display: flex;
   flex-direction: column;
 }
 .footer {
-  background: variables.$black;
+  background: $black;
   padding: 2rem 0;
   width: 100%;
   height: auto;
   color: white;
-  font-family: variables.$lato;
+  font-family: $lato;
   font-weight: 700;
   @include flex-column;
   align-items: center;

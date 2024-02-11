@@ -8,6 +8,7 @@
 }
 .homepage--carousel-slide, .homepage--carousel-chunk-high, .homepage--carousel-chunk-low {
   display: flex;
+  flex-direction: row;
   align-items: center;
   column-gap: 1rem;
 }

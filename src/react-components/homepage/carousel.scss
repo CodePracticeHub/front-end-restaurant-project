@@ -10,8 +10,8 @@
     &-slide,
     &-chunk-high,
     &-chunk-low {
-      display: flex;
-      align-items: center;
+      @include flex-row;
+       align-items: center;
       column-gap: 1rem;
     }
 

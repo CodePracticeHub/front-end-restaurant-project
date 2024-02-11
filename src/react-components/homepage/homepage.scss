@@ -1,17 +1,14 @@
-@use "../variables.scss";
+@use "../variables.scss" as *;
 //sass --watch src/react-components/homepage/homepage.scss src/react-components/homepage/homepage.css
 
 //responsive design - phone first
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
+
 * {
   margin: 0;
   padding: 0;
 }
 .homepage {
-  font-family: variables.$josefin_sans;
+  font-family: $josefin_sans;
   @include flex-column();
   h1 {
     font-size: 1.4rem;
@@ -23,9 +20,12 @@
     font-size: 1.2rem;
   }
   p {
-    font-family: "Lato", sans-serif;
-    font-size: 0.75rem;
-    font-weight: 300;
+    font: {
+      family: "Lato", sans-serif;
+      size: 0.75rem;
+      weight: 300;
+    }
+
     line-height: 1.2rem;
     text-align: justify;
   }
@@ -35,12 +35,11 @@
     height: auto;
     margin: 0 auto;
     position: relative;
-
     display: flex;
-    justify-content: center;
+    @include flex-center;
     row-gap: 0.4rem;
     color: white;
-    text-align: center;
+
     img {
       width: 100%;
       height: 40rem;
@@ -51,11 +50,9 @@
       position: absolute;
       height: 100%;
       width: 90%;
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
+      @include flex-center;
       row-gap: 1rem;
-      justify-content: center;
-      align-items: center;
       z-index: 1;
       font-size: 1rem;
       p {
@@ -73,8 +70,7 @@
   }
 
   &--card {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
     padding: 2rem 1.7rem;
     color: white;
@@ -95,10 +91,10 @@
       }
     }
     &:first-child {
-      background: variables.$dark_red;
+      background: $dark_red;
     }
     &:nth-child(2) {
-      background: variables.$black;
+      background: $black;
     }
 
     img {
@@ -109,10 +105,8 @@
   &--book {
     color: white;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-column;
+    @include flex-center;
     img {
       width: 100%;
       height: 40rem;
@@ -124,14 +118,13 @@
     }
     &-text {
       row-gap: 1rem;
-      flex-direction: column;
-      display: flex;
+      @include flex-column;
       width: 80%;
       position: absolute;
     }
     &-button {
       margin-top: 0.5rem;
-      background: variables.$dark_red;
+      background: $dark_red;
       border: none;
       border-radius: 2rem;
       font-size: 0.75rem;
@@ -141,7 +134,7 @@
       color: white;
       &:hover {
         background: white;
-        color: variables.$black;
+        color: $black;
         cursor: pointer;
       }
     }
@@ -180,8 +173,7 @@
       }
     }
     &--new {
-      display: flex;
-      flex-direction: column;
+   @include flex-column;
       align-items: center;
     }
     &--card {
