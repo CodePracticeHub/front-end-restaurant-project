@@ -1,7 +1,5 @@
 import React from "react";
 import "./hamburger.css";
-import Dropdown from "./dropdown";
-import { useState } from "react";
 interface HamburgerProps {
   onClick: () => void;
   changeColor: boolean;

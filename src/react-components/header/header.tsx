@@ -19,18 +19,10 @@ const HeaderList: React.FC = () => {
   );
 };
 const HeaderNav: React.FC = () => {
-  const [toggleHamburgerClicked, setToggleHamburgerClicked] = useState(false);
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const ClickHandler = () => {
     setToggleDropdown(!toggleDropdown);
-    // const getHamburger: Element | null =
-    //   document.getElementsByClassName("hamburger")[0];
-    // if (!toggleDropdown) {
-    //   (getHamburger as HTMLElement).style.background = "white";
-    // } else {
-    //   (getHamburger as HTMLElement).style.background = "red";
-    // }
-    return toggleHamburgerClicked;
+    return null;
   };
 
   return (
