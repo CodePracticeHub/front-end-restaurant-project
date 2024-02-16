@@ -85,7 +85,7 @@ export default function ReservationRev() {
               <b>Reservation Review</b>
             </h2>
 
-            <span>Reservation informations</span>
+            <span>Reservation Information</span>
             <div className="infos-box first-box">
               <div className="label-box">
                 <p> Date </p>
@@ -101,11 +101,11 @@ export default function ReservationRev() {
               </div>
             </div>
 
-            <span>Guest informations</span>
+            <span>Guest Information</span>
             <div className="infos-box second-box">
               <div className="label-box">
-                <p> Name </p>
-                <p>email </p>
+                <p>Name </p>
+                <p>Email </p>
                 <p>Contact Number </p>
               </div>
               <div className="data-box">
@@ -115,7 +115,7 @@ export default function ReservationRev() {
               </div>
             </div>
 
-            <span>Payment informations</span>
+            <span>Payment Information</span>
             <div className="infos-box third-box">
               <div className="label-box">
                 <p> Card Number </p>
@@ -132,7 +132,7 @@ export default function ReservationRev() {
             </div>
 
             <button onClick={NextPage} className="btn">
-              Procced to Payment
+              Proceed to Payment
             </button>
           </div>
         </div>

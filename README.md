@@ -5,9 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 React Version 18.2.0
 TypeScript Version 5.3.3
 
-## Currently being built:
+## What to do:
 
-1. Homepage
+See Figma to find new pages to build
 
 ## To work on this repository please
 
