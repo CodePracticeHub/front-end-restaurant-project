@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .homepage {
   font-family: "Josefin Sans", sans-serif;
   display: flex;

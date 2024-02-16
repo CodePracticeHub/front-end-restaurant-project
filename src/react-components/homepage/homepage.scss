@@ -7,6 +7,10 @@
   margin: 0;
   padding: 0;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 .homepage {
   font-family: $josefin_sans;
   @include flex-column();

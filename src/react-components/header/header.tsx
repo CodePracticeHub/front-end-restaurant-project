@@ -2,13 +2,14 @@ import React from "react";
 import "./header.css";
 import Hamburger from "./hamburger.tsx";
 import Dropdown from "./dropdown.tsx";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 const HeaderList: React.FC = () => {
   return (
     <ul>
       <li>book a table</li>
-      <li>reservation status</li>
+      <Link to="/reservation">reservation status</Link>
       <li>menu</li>
       <li>events</li>
       <li>about us</li>
