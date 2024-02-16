@@ -1,18 +1,18 @@
 import React from "react";
 import ErrorBoundary from "../ErrorComponents/ErrorBoundary.tsx";
-import { ReservationDetails } from "./Types";
+// import { ReservationDetails } from "./Types";
 import { SpinnerLoading } from "../utils/SpinnerLoading.tsx";
 import "./ReservationRevStyle.css";
-import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
-import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
+// import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
+// import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
 import { Link } from "react-router-dom";
 
 // NOTE: IN CASE YOU WANNA SEE HOW THIS COMPONENT LOOKS LIKE
 // IMPORT THIS COMP IN index.tsx and run it
 
 export default function ReservationRev() {
-  const [ReservDetails, setReservDetails] =
-    React.useState<ReservationDetails | null>(null);
+  // const [ReservDetails, setReservDetails] =
+  //   React.useState<ReservationDetails | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [Error, setError] = React.useState();
 
@@ -30,10 +30,11 @@ export default function ReservationRev() {
     const FetchData = async () => {
       try {
         setIsLoading(true);
-        const data = await fetch("https://jsonplaceholder.typicode.com/users"); // this api just to test
+        // const data = await fetch("https://jsonplaceholder.typicode.com/users");
+        // this api just to test
 
         // Convert data to json
-        const Data_as_json: {} = await data.json();
+        // const Data_as_json: {} = await data.json();
 
         // setReservDetails(Data_as_json)
       } catch (e: any) {
@@ -58,7 +59,7 @@ export default function ReservationRev() {
 
   return (
     <div>
-      <TopPage />
+      {/* <TopPage /> */}
 
       <div id="container">
         {/* left section */}
@@ -137,7 +138,7 @@ export default function ReservationRev() {
         </div>
       </div>
 
-      <BottomPage />
+      {/* <BottomPage /> */}
     </div>
   );
 }
