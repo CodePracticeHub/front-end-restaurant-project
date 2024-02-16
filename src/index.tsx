@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-// import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
 
 
 
@@ -11,7 +10,6 @@ const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 root.render(
   <React.StrictMode>
     <App /> 
-    {/* <ReservationRev/> */}   
   </React.StrictMode>
 );
 

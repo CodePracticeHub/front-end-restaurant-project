@@ -3,7 +3,12 @@ import ErrorBoundary from "../ErrorComponents/ErrorBoundary.tsx";
 import { ReservationDetails } from "./Types";
 import { SpinnerLoading } from "../utils/SpinnerLoading.tsx";
 import "./ReservationRevStyle.css"
+import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
+import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
 
+
+// NOTE: IN CASE YOU WANNA SEE HOW THIS COMPONENT LOOKS LIKE 
+      // IMPORT THIS COMP IN index.tsx and run it 
 
 export default function ReservationRev() {
 
@@ -68,8 +73,8 @@ export default function ReservationRev() {
   return (
     <div>
       
-      <div className="Page-Top"> <img src="images/logo-steakbuds-1000-x-285-20.png" alt="Logo" /> </div>
-
+      <TopPage/>
+      
       <div id="container">
         
         {/* left section */}
@@ -149,18 +154,13 @@ export default function ReservationRev() {
       </div> 
 
     
-      <footer className="Res-page-footer" style={{backgroundColor:"#111114"}}>
-        <img className="Bottom-logo" src="images/logo-steakbuds-1000-x-285-21.png" alt="bottomPageLogo" />
-        <p>Helpline: 873487324</p>
-        <p>Email us: Help@steakbuds.com</p>
-      </footer>
+
     
     
     
     
     
-    
-    
+    <BottomPage/>
     
     
     

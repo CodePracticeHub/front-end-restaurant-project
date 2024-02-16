@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/react-components/Login
 
 # testing
 /coverage

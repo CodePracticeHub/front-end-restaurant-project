@@ -1,0 +1,16 @@
+.Res-page-footer{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+}
+
+.Res-page-footer p{
+    margin: 0;
+}
