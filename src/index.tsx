@@ -2,9 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
 import { BrowserRouter } from "react-router-dom";
-import Homepage from "./react-components/homepage/homepage.tsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 root.render(
