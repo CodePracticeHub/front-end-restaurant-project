@@ -11,7 +11,6 @@ import Signup from "./react-components/SignUp/Registration/Signup.tsx";
 function App() {
   return (
     <>
-      <HeaderNav />
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
         <Route path="/Sign-in" element={< Login/>}></Route>
@@ -22,7 +21,6 @@ function App() {
 
 
       </Routes>
-      <Footer />
     </>
   );
 }

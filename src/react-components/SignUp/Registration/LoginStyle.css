@@ -1,110 +1,92 @@
 *{
-    margin: 0;
-    padding: 0;
+    padding: 0;margin: 0;box-sizing: border-box;
 }
 
-.Login-main{
-    /* border: 3px solid black; */
-    display: flex;
-    flex-direction: row;
-    padding: 15px 0;
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0;
+  
 }
 
 
-/*      button side     */
-
-
-.Left-Side{
-    width: 35%;
+.main-section{
     display: flex;
-    justify-content: center;
-    margin: 0;
-
-}
-
-.Left-Side .iconAndtext{
-    cursor: pointer;
-
-    color: white;
-    background-color: #111114;
-    height: max-content;
-    padding: 5px 10px;
-    border-radius: 3px;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-   
+    width: 35%;
 
 }
 
-.Back-icon{
-    margin: 0 3px 0 0;
-}
-
-
-
-
-/*     FROM SECTION       */
-
-.form-section{
-    /* border: 3px solid blue; */
-    width: 65%;
+.form-part{
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 2px 2px rgba(253, 206, 110, 1);
+    padding: 20px 25px 25px 25px;
+    border-radius: 5px;
+
 }
 
+.form-part h1{
+    margin: 15px 0 0 0 ;
+    font-size: x-large;
 
-.sub-section{
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 2px 2px 2px rgba(253, 206, 110, 1);
-        padding: 15px 20px 20px 20px;
 }
 
-
-.sub-section h1{
-    /* border: 1px solid red; */
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.sub-section .span{
-    /* border: 1px solid red; */
-    font-weight: 500;
-    margin-bottom: 15px;
+.form-part span{
     text-align: center;
-    
+    margin: 15px 0;
+    font-weight: 500;
 }
 
 .form{
-    width: 90%;
-    /* border: 3px solid saddlebrown; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: left;
+
 }
 
-.form input[type=email] , .form input[type=password] , .form input[type=text]{
-    border:1px solid #000000;
-    text-indent: 10px;
+.form label {
+    color: #79040A;
+    padding: 4px 0 2px 0;
+
+}
+.label{
+    padding: 4px 0 2px 0;    
+    margin-top: 5px; 
+
+}
+
+.pass-label
+{
+    margin-top: 10px; 
+}
+
+.form input[type=email] , .form input[type=password], input[type=text]{
+    border:1.5px solid #000000;
+    text-indent: 15px;
     padding: 15px 0; 
     border-radius: 3px;
     outline: none;
 
-
+}
+.form input[type=email]{
+    text-align: none;
 }
 
-.form label{
-    color: #79040A;
-    margin: 15px 0  0 0;
 
 
-}
 .form .forgot-pass-btn{
-    color: #000000;
-    width: max-content;
+    color: black;
     border-bottom: 1px solid black;
+    width: max-content;
+    padding: 0px;
+    margin-top: 15px;
+
 }
 
 input[class=login-btn] , input[class=Signup-btn], .guest-btn{
@@ -115,221 +97,107 @@ input[class=login-btn] , input[class=Signup-btn], .guest-btn{
 
 }
 
-input[class=login-btn] {
+input[class=login-btn], .guest-btn{
     background-color: #79040A;
-    margin: 15px 0 10px 0;
-  
+    margin: 15px 0;
+
 }
+
 input[class=login-btn]:disabled {
     background-color: #73737b;
-  
+ 
 }
-input[class=Signup-btn] {
+
+input[class=Signup-btn]{
     background-color: #000000;
-    margin-top: 10px;
 }
 
-button, .forgot-pass-btn,
-input[type="button"],
-input[type="submit"] {
-    cursor: pointer;
+.guest-part{
+    margin-top: 25px;
+    width: 88.43%;
 }
 
+.guest-part p{
+    font-weight: 500;
+    text-align: center;
+} 
 
-
-.Guest-div{
+.guest-part .guest-btn{
     width: 100%;
-    display: flex;
-    justify-content: right;
-    display: flex;
-    flex-direction: row;
-    margin: 15px 0 15px 0;
 }
-
-.empty-left-div{
-    width: 35%;
-
-}
-
-.right-div{
-    width: 65%;
-}
-
-.sub-right-div{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.guest-btn{
-    width: 83%;
-    background-color:#79040A ;
-    color: #FFFFFF;
-    border-radius: 3px;  
-    margin: 15px 0 10px 0;
-    outline: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 .errMess{
     color: #f70d18;
     text-align: left;
+    font-style: italic;
     padding: 0;
     margin: 0;
-    font-weight: 600;
+
 }
+
 
 
 .ThankMessage{
-    background-color: #91d370;
-background-image: linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%);
-padding: 5px 15px;
-border-radius: 5px;
-font-weight: 700;
+    padding: 3px 15px;
+    border-radius: 3px;
+    color: #000000;
+
 }
-
-
-
-
-
-
-
-
+.ThankMessage a{
+    color: blue;
+    text-decoration: underline;
+}
 
 
 
 @media (max-width:1041px) {
-    .sub-section{
-        width: 50% ;
+    .main-section{
+        width:50%;
     }
 }
 
 @media (max-width:920px) {
-    .Left-Side{
-        width: 32% ;
-    }
-    .form-section{
-        width: 68%;
-    }
-    .sub-section{
-        width: 55%;
+    .main-section{
+        width: 50%;
     }
 }
 
 
 @media (max-width:780px) {
-    .Left-Side{
-        width: 30% ;
-    }
-    .form-section{
-        width: 70%;
-    }
-    .sub-section{
+   
+    .main-section{
         width: 60%;
     }
 }
 
 @media (max-width:752px) {
-    .Left-Side{
-        width: 27% ;
-    }
-    .form-section{
-        width: 73%;
-    }
-    .sub-section{
+   
+    .main-section{
         width: 65%;
     }
 }
 
 @media (max-width:609px) {
-    .Left-Side{
-        width: 25% ;
-    }
-    .form-section{
-        width: 85%;
-    }
-    .sub-section{
+  
+    .main-section{
         width: 65%;
     }
 }
 
 @media (max-width:563px) {
-    .Left-Side{
-        width: 23% ;
+    .main-section{
+        width: 93%;
     }
-    .form-section{
-        width: 87%;
+    .Back-icon{
+        left: 3%;
     }
-    .sub-section{
-        width: 70%;
-    }
+    
 }
 
 @media (max-width:523px) {
-    .sub-section .span{
+    .main-section .span{
         font-size: 14px;
     }
 }
 
 
-@media  (max-width:490px) {
-    .Left-Side {
-        position: absolute;
-        top: 20px;
-        left: 5px;
-        width: max-content;
-      }
-      .form-section{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-}
-
-@media (max-width:376px) {
-    .Left-Side {
-        position: absolute;
-        top: 20px;
-        width: max-content;
-      }
-      .form-section h1{
-        font-size: 28px;
-        
-      }
-}
-
-@media (max-width:376px) {
-    .Left-Side {
-        position: absolute;
-        top: 20px;
-        width: max-content;
-      }
-      .form-section h1{
-        font-size: 28px;
-        
-      }
-}
-
-@media (max-width:361px) {
-    
-      .form-section h1{
-        font-size: 27px;
-      }
-      .form-section .span{
-        font-size: small;
-      }
-}
