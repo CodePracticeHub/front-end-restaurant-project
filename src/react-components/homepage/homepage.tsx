@@ -30,8 +30,6 @@ const Card: React.FC<CardProps> = ({
 const Homepage = () => {
   return (
     <main className="homepage">
-      <HeaderNav />
-
       <section className="homepage--welcome">
         <img src="./images/rectangle-1690.png" alt="wine table" />
         <div className="homepage--welcome-text">
@@ -79,7 +77,6 @@ const Homepage = () => {
           <button className="homepage--book-button">Book a table</button>
         </div>
       </section>
-      <Footer/>
     </main>
   );
 };

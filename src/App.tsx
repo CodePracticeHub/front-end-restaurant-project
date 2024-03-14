@@ -12,14 +12,13 @@ import TopPage from "./react-components/Top-and-Bottom-comp/TopPage.tsx";
 
 function ReloadOnRouteChange() {
   const location = useLocation();
-  useEffect(() => {
-  }, [location.pathname]);
+  useEffect(() => {}, [location.pathname]);
 }
 const changeH_F = (homeTag: React.JSX.Element, tag: React.JSX.Element) => {
-  if (window.location.pathname === "/reservation") {
-    return tag;
-  } else {
+  if (window.location.pathname === "/") {
     return homeTag;
+  } else {
+    return tag;
   }
 };
 
@@ -27,17 +26,14 @@ function App() {
   ReloadOnRouteChange();
   return (
     <>
-
-    {changeH_F(<HeaderNav/>,<TopPage/>)}
+      {changeH_F(<HeaderNav />, <TopPage />)}
       <Routes>
-        <Route path="/" element={<Homepage/>}></Route>
-        <Route path="/Sign-in" element={< Login/>}></Route>
-        <Route path="/Sign-up" element={< Signup/>}></Route>
-        <Route path="/reservation-details" element={< ReservationRev/>}></Route>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/Sign-in" element={<Login />}></Route>
+        <Route path="/Sign-up" element={<Signup />}></Route>
+        <Route path="/reservation-details" element={<ReservationRev />}></Route>
 
         {/* <Route path="/Guest-reservation" element={</>}></Route> componant havent been created yet  */}
-
-
       </Routes>
       {changeH_F(<Footer />, <BottomPage />)}
     </>
