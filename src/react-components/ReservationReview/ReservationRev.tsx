@@ -1,8 +1,11 @@
 import React from "react";
-import ErrorBoundary from "../ErrorComponents/ErrorBoundary.tsx";
-// import { ReservationDetails } from "./Types";
+import ErrorBoundary from "../ErrorComponents/ErrorMessagePopup.tsx";
 import { SpinnerLoading } from "../utils/SpinnerLoading.tsx";
 import "./ReservationRevStyle.css";
+import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
+import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
+import {  useNavigate } from "react-router-dom";
+import { ReservationRevDetails } from "../../Models/ReservationRevClass.ts";
 // import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
 // import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
 import { Link } from "react-router-dom";
@@ -11,19 +14,24 @@ import { Link } from "react-router-dom";
 // IMPORT THIS COMP IN index.tsx and run it
 
 export default function ReservationRev() {
+
+  
   // const [ReservDetails, setReservDetails] =
   //   React.useState<ReservationDetails | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [Error, setError] = React.useState();
+  const Navigate = useNavigate()
 
   // Redirect user to the Previous page
   const HeadToPreviousPage = (): void => {
-    // implement the code
+
+    Navigate("/guest-reserv")
   };
 
   // Redirect user to the Payment page
   const NextPage = (): void => {
-    // implement the code
+
+    Navigate("/payments")
   };
 
   React.useEffect(() => {
@@ -37,6 +45,7 @@ export default function ReservationRev() {
         // const Data_as_json: {} = await data.json();
 
         // setReservDetails(Data_as_json)
+        
       } catch (e: any) {
         setError(e);
       } finally {
@@ -47,7 +56,7 @@ export default function ReservationRev() {
     FetchData();
   }, []);
 
-  // this code will work in case smt happeneed with fetching data
+  // this code will work in case smt happened with fetching data
   if (Error) {
     return <ErrorBoundary />;
   }
@@ -73,7 +82,7 @@ export default function ReservationRev() {
               src="https://img.icons8.com/ios-filled/50/FFFFFF/left.png"
               alt="left"
             />
-            <Link to="/">Back</Link>
+            Back
           </span>
         </div>
 

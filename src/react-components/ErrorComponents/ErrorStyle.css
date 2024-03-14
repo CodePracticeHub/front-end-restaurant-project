@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+@keyframes Myanim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.error-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+    animation: Myanim 1s;
+    position: absolute;
+    top: 20%;
+    right:5px;
+}
+
+.error-div .error-span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: red;
+    color: black;
+    font-size: larger;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.error-span p{
+    margin-top: 3px;
+    font-weight: 700;
+
+}
+
+.error-span img{
+    cursor: pointer;       
+}
+
+.error-span button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

@@ -14,7 +14,7 @@ const HeaderList: React.FC = () => {
       <li>events</li>
       <li>about us</li>
       <li id="sign-in">
-        <span>sign in</span>
+        <Link to="/Sign-in">sign in</Link>
       </li>
     </ul>
   );
