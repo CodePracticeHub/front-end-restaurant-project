@@ -14,3 +14,14 @@
 .Res-page-footer p{
     margin: 0;
 }
+
+@media (max-width: 391px) {
+    .Bottom-logo {
+      width: 90%;
+    }
+  }
+  @media (max-width: 376px) {
+    .Bottom-logo {
+      width: 80%;
+    }
+  }
