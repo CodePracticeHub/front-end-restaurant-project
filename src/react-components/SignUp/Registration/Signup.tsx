@@ -40,6 +40,8 @@ export default function Signup({ removeComp }) {
 
   return (
     <div>
+      <TopPage />
+
       <main className="main">
         <section className="main-section">
           <div className="form-part">
@@ -137,9 +139,16 @@ export default function Signup({ removeComp }) {
         </section>
       </main>
 
+      <BottomPage />
+
       {ErrorMessage && (
         <ErrorMessageComp removeComp={() => setErrorMessage(false)} />
       )}
     </div>
   );
 }
+
+// Function to generate default role object
+// function getDefaultRole(): Role {
+//   return { id: 2, name: ERole.ROLE_USER };
+// }
