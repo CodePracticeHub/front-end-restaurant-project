@@ -41,7 +41,7 @@ export default function Login() {
       setTimeout(() => {
         setIsLoginSuccess(false);
         setMessage("");
-        navigate("/dashboard"); // Redirect to dashboard upon successful login
+        navigate("/reservation"); // Redirect to dashboard upon successful login
       }, 3000); // Reset success message after 3 seconds
 
       // will clear the inputs in case submission went well
