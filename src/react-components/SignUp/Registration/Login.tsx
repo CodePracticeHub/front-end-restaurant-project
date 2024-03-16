@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./LoginStyle.css";
 import TopPage from "../../Top-and-Bottom-comp/TopPage.tsx";
 import BottomPage from "../../Top-and-Bottom-comp/BottomPage.tsx";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FieldValues, useForm } from "react-hook-form";
 import axios from "axios";
 import ErrorMessageComp from "../../ErrorComponents/ErrorMessagePopup.tsx";
@@ -15,7 +15,8 @@ export default function Login() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm();
-  const [Message, setMessage] = useState(false);
+  const [Message, setMessage] = useState("");
+  const [isLoginSuccess, setIsLoginSuccess] = useState(false);
 
   // Redirect user to Sign-up/forgot password Page
   function RedirectTo(eo) {
@@ -29,102 +30,101 @@ export default function Login() {
 
   // Handling Form submission
   const HandleForm = async (data: FieldValues) => {
-    //
     try {
-      const URL = "https://dummyjson.com/products/add";
+      const URL = "http://localhost:8090/api/auth/signin";
 
       const response = await axios.post(URL, data);
 
       // navigate the user to his profile or smt like that
-      navigate("");
-      // will clear the inputs in case submission went well
+      setIsLoginSuccess(true);
+      setMessage("Login successful!");
+      setTimeout(() => {
+        setIsLoginSuccess(false);
+        setMessage("");
+        navigate("/dashboard"); // Redirect to dashboard upon successful login
+      }, 3000); // Reset success message after 3 seconds
 
+      // will clear the inputs in case submission went well
       reset();
     } catch (error) {
       console.log(error);
-      setMessage(true);
+      setMessage("An error occurred during login.");
     }
   };
 
   return (
-    <div>
-      <main className="main">
-        <section className="main-section">
-          <div className="form-part">
-            <h1> Login to Steakbuds</h1>
-            <span className="span">
+      <div>
+        <main className="main">
+          <section className="main-section">
+            <div className="form-part">
+              <h1> Login to Steakbuds</h1>
+              <span className="span">
               {" "}
-              Login to steakbuds to enter your details
+                Login to steakbuds to enter your details
             </span>
 
-            <form onSubmit={handleSubmit(HandleForm)} className="form">
-              <label htmlFor="email"> Email</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                {...register("email", { required: "Email required" })}
-              />
-              {errors.email && (
-                <p className="errMess">{errors.email?.message}</p>
-              )}
+              <form onSubmit={handleSubmit(HandleForm)} className="form">
+                <label htmlFor="username"> Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    {...register("username", { required: "Username required" })}
+                />
+                {errors.username && (
+                    <p className="errMess">{errors.username?.message}</p>
+                )}
 
-              <label className="pass-label" htmlFor="passw">
-                Password
-              </label>
-              <input
-                type="password"
-                id="passw"
-                placeholder="Password"
-                {...register("password", { required: "Password required" })}
-              />
-              {errors.password && (
-                <p className="errMess">{errors.password?.message}</p>
-              )}
+                <label className="pass-label" htmlFor="passw">
+                  Password
+                </label>
+                <input
+                    type="password"
+                    id="passw"
+                    placeholder="Password"
+                    {...register("password", { required: "Password required" })}
+                />
+                {errors.password && (
+                    <p className="errMess">{errors.password?.message}</p>
+                )}
 
-              <label onClick={RedirectTo} className="forgot-pass-btn">
-                Forgot password?
-              </label>
+                <label onClick={RedirectTo} className="forgot-pass-btn">
+                  Forgot password?
+                </label>
 
-              <input
-                disabled={isSubmitting}
-                type="submit"
-                id="login"
-                value={isSubmitting ? "HOLD ON..." : "LOGIN"}
-                className="login-btn"
-              />
+                <input
+                    disabled={isSubmitting}
+                    type="submit"
+                    id="login"
+                    value={isSubmitting ? "HOLD ON..." : "LOGIN"}
+                    className="login-btn"
+                />
 
-              <input
-                onClick={RedirectTo}
-                type="button"
-                value="New user? SIGN UP"
-                id="signup"
-                className="Signup-btn"
-              />
-            </form>
-          </div>
-
-          <div className="guest-part">
-            <div>
-              <p>Don’t want to Sign up? Use guest reservation</p>
-              <button
-                onClick={() => navigate("/Guest-reservation")}
-                className="guest-btn"
-              >
-                GUEST RESERVATION
-              </button>
+                <input
+                    onClick={RedirectTo}
+                    type="button"
+                    value="New user? SIGN UP"
+                    id="signup"
+                    className="Signup-btn"
+                />
+              </form>
             </div>
-          </div>
-        </section>
-      </main>
 
-      {Message && (
-        <ErrorMessageComp
-          removeComp={() => {
-            setMessage(false);
-          }}
-        />
-      )}
-    </div>
+            <div className="guest-part">
+              <div>
+                <p>Don’t want to Sign up? Use guest reservation</p>
+                <button
+                    onClick={() => navigate("/Guest-reservation")}
+                    className="guest-btn"
+                >
+                  GUEST RESERVATION
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        {Message && <p className={isLoginSuccess ? "successMsg" : "errMsg"}>{Message}</p>}
+      </div>
   );
 }
