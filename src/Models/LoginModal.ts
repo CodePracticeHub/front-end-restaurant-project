@@ -1,4 +1,4 @@
-export type LoginCredentiel = {
+export type LoginModal = {
     Email:string,
     Pass:string
 }

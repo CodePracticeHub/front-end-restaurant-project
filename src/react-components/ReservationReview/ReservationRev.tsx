@@ -5,7 +5,7 @@ import "./ReservationRevStyle.css";
 import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
 import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
 import {  useNavigate } from "react-router-dom";
-import { ReservationRevDetails } from "../../Models/ReservationRevClass.ts";
+import { ReservationRevDetails } from "../../Models/ReservationModal.ts";
 // import TopPage from "../Top-and-Bottom-comp/TopPage.tsx";
 // import BottomPage from "../Top-and-Bottom-comp/BottomPage.tsx";
 import { Link } from "react-router-dom";
