@@ -123,7 +123,6 @@ export default function Signup() {
 
   return (
       <div>
-        <TopPage />
         <main className="main">
           <section className="main-section">
             <div className="form-part">
@@ -165,7 +164,6 @@ export default function Signup() {
             </div>
           </section>
         </main>
-        <BottomPage/>
         {errorMessage && <ErrorMessageComp removeComp={() => setErrorMessage('')} />}
       </div>
   );
