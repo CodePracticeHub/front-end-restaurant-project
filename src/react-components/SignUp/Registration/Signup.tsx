@@ -40,6 +40,8 @@ export default function Signup({ removeComp }) {
 
   return (
     <div>
+      <TopPage />
+
       <main className="main">
         <section className="main-section">
           <div className="form-part">
@@ -136,6 +138,8 @@ export default function Signup({ removeComp }) {
           </div>
         </section>
       </main>
+
+      <BottomPage />
 
       {ErrorMessage && (
         <ErrorMessageComp removeComp={() => setErrorMessage(false)} />
