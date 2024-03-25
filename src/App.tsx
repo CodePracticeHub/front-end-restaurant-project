@@ -9,6 +9,7 @@ import Login from "./react-components/SignUp/Registration/Login.tsx";
 import Signup from "./react-components/SignUp/Registration/Signup.tsx";
 import BottomPage from "./react-components/Top-and-Bottom-comp/BottomPage.tsx";
 import TopPage from "./react-components/Top-and-Bottom-comp/TopPage.tsx";
+import GuestReservation from "./react-components/Guest-Reserv/GuestReservation.jsx";
 
 function ReloadOnRouteChange() {
   const location = useLocation();
@@ -33,7 +34,7 @@ function App() {
         <Route path="/Sign-up" element={<Signup />}></Route>
         <Route path="/reservation-details" element={<ReservationRev />}></Route>
 
-        {/* <Route path="/Guest-reservation" element={</>}></Route> componant havent been created yet  */}
+        <Route path="/Guest-reservation" element={<GuestReservation/>}></Route>  
       </Routes>
       {changeH_F(<Footer />, <BottomPage />)}
     </>

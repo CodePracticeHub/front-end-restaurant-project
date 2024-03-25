@@ -1,0 +1,57 @@
+.top-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.wrapper{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*-------- first div ------------- */
+
+.first-div{
+    padding-bottom: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
+.first-div h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+/* this will affect that span below h2 */
+.first-div .line{
+    margin: 0 0 15px 0;
+}
+
+
+.selected-data{
+    width: 100%;    
+    /* border: 2px solid blue; */
+    position: relative;
+}
+
+.selected-data span{
+    color: red;
+    position: absolute;
+    right:40%;
+}
+
+.bottom-line{
+    width: 110%;
+    color: black;
+    outline: none;
+    margin: 10px 0;
+}
