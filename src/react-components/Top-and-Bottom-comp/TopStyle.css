@@ -16,3 +16,17 @@
     left: 15%;
     
 }
+
+
+@media (max-width: 376px) {
+    .Back-icon{
+      left: 5%;
+    }
+  }
+
+
+  @media (max-width:415px) {
+    .Back-icon{
+      left: 5%;
+    }
+}

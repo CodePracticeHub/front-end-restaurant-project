@@ -1,0 +1,234 @@
+.top-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+
+.wrapper{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 2px 2px rgba(253, 206, 110, 1);
+    border-radius: 5px;
+    padding: 20px 35px 35px 35px;
+
+}
+
+.wrapper form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*-------- first div ------------- */
+
+.first-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-div h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+
+.selected-data{
+    margin-top: 13px;
+    width: 100%;    
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.selected-data .fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+
+}
+
+.selected-data .data{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: red;
+
+}
+
+/* .selected-data span{
+    color: red;
+    position: absolute;
+    right:40%;
+} */
+
+.bottom-line{
+    width: 100%;
+    color: black;
+    outline: none;
+    margin: 15px auto;
+}
+
+
+/*----------second div PERSONAL INFO FORM---------*/
+
+.second-div span{
+    text-align: center;
+    color: #111114;
+    font-weight: 500;
+}
+
+
+
+/*----------3rd div """ PAYMENT INFO FORM """---------*/
+
+.row-one{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+
+.row-one .CCN{
+    width: 70%;
+}
+
+.row-one .CVC{
+    width: 30%;
+    
+}
+
+.third-div .Last-row{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Last-row .trio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.submit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    border:1.5px solid #000000;
+    background-color: #79040A;
+    color: white;
+    padding: 15px 0; 
+    border-radius: 3px;
+    outline: none;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+
+
+/*----- GLOBAL STYLE FOR PAGE: GUEST RESERVATION INPUTS + LABELS + 2nd + 3rd div ------- */
+.Guest-Res-Input {
+    width: 100%;
+    border:1.5px solid #000000;
+    text-indent: 15px;
+    padding: 15px 0; 
+    border-radius: 3px;
+    outline: none;
+}
+
+.BorderRed{
+    border:1.5px solid red; 
+}
+
+.Guest-Res-label{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    color: #79040A;
+    gap: 3px;
+}
+
+.second-div , .third-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Guest-Res-Sub-title{
+    text-align: center;
+    color: #111114;
+    font-weight: 500;
+
+}
+
+
+/*----------- HANDLE RESPONSIVENISS --------- */
+
+@media (max-width:1025px) {
+    .wrapper{
+        width: 45%;
+    }
+}
+
+@media (max-width:821px) {
+    .wrapper{
+        width: 55%;
+    }
+}
+
+@media (max-width:769px) {
+    .wrapper{
+        width: 60%;
+    }
+}
+
+@media (max-width:541px) {
+    .wrapper{
+        width: 70%;
+    }
+}
+
+@media (max-width:415px) {
+    .wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width:376px) {
+    .wrapper{
+        width: 90%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+
+
+
+/* Remove the arrows in input type number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

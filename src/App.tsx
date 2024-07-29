@@ -4,11 +4,12 @@ import { HeaderNav } from "./react-components/header/header.tsx";
 import Footer from "./react-components/footer/footer.tsx";
 import Homepage from "./react-components/homepage/homepage.tsx";
 import { Routes, Route, useLocation } from "react-router-dom";
-import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
+// import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
 import Login from "./react-components/SignUp/Registration/Login.tsx";
 import Signup from "./react-components/SignUp/Registration/Signup.tsx";
 import BottomPage from "./react-components/Top-and-Bottom-comp/BottomPage.tsx";
 import TopPage from "./react-components/Top-and-Bottom-comp/TopPage.tsx";
+import GuestReservation from "./react-components/Guest-Reserv/GuestReservation.jsx";
 
 function ReloadOnRouteChange() {
   const location = useLocation();
@@ -31,9 +32,9 @@ function App() {
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/Sign-in" element={<Login />}></Route>
         <Route path="/Sign-up" element={<Signup />}></Route>
-        <Route path="/reservation-details" element={<ReservationRev />}></Route>
+        {/* <Route path="/reservation-details" element={<ReservationRev />}></Route> On the work */}
 
-        {/* <Route path="/Guest-reservation" element={</>}></Route> componant havent been created yet  */}
+        <Route path="/Guest-reservation" element={<GuestReservation/>}></Route>  
       </Routes>
       {changeH_F(<Footer />, <BottomPage />)}
     </>
