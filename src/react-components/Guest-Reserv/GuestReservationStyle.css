@@ -49,13 +49,31 @@
     margin-top: 13px;
     width: 100%;    
     position: relative;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.selected-data span{
+.selected-data .fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+
+}
+
+.selected-data .data{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: red;
+
+}
+
+/* .selected-data span{
     color: red;
     position: absolute;
     right:40%;
-}
+} */
 
 .bottom-line{
     width: 100%;
@@ -136,6 +154,10 @@
     outline: none;
 }
 
+.BorderRed{
+    border:1.5px solid red; 
+}
+
 .Guest-Res-label{
     display: flex;
     flex-direction: column;
@@ -196,4 +218,17 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+
+
+
+
+
+/* Remove the arrows in input type number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
