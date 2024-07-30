@@ -78,7 +78,7 @@ export default function GuestReservation() {
                     </label>
                     <label className='Guest-Res-label' >
                         Contact number 
-                        <input type="email" placeholder="Enter your phone number"
+                        <input type="number" placeholder="Enter your phone number"
                             id="contactNum" className='Guest-Res-Input' {...register("ContactNumber", {required:"Field required"} )} />
                             {errors.ContactNumber && <p>{errors.ContactNumber.message}</p> }
                     </label>
