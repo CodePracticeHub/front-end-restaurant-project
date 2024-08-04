@@ -1,0 +1,67 @@
+.user_Profile{
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5em;
+}
+
+.user_Profile .sub_cont{
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+.sub_cont .your_acc_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    border-bottom: 3px solid #79040A
+    ;
+}
+
+.your_acc_container h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.arrow{
+    position: absolute;
+    left: 0;
+}
+
+
+
+/* options */
+
+.Options_container{
+    stroke-dashoffset: 0%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    margin: 10px 10px 20px 8px;
+    font-weight: 600;
+    color: #545454    ;
+    font-family: "Lato", sans-serif;
+}
+
+ul li:hover{
+    color: #79040A    ;
+}
+
+
+
+/* data container */
+
+.user_info_container{
+    border-left: 2px solid green;
+}
