@@ -1,0 +1,31 @@
+.Your-Account-Container{
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5em;
+}
+
+.your_acc_Sub_Container{
+    width: 75%;
+}
+
+.your_acc_Sub_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    border-bottom: 3px solid #79040A;
+}
+
+.your_acc_Sub_Container h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.arrow{
+    position: absolute;
+    left: 0;
+}
+
+
