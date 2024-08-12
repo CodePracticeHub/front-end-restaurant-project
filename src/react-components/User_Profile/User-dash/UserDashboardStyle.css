@@ -1,0 +1,58 @@
+.Options_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.list_of_options {  
+    list-style-type: none;
+    width: 70%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 2em 5em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "AccouInfo YourRes orders"
+      "wishlist paymentInfo savedAdresses"
+      "accSec Notif Lang";
+  }
+
+  .list_of_options li{
+    border: 2px solid red;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: #545454;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .list_of_options li:hover{
+    color: #79040A;
+}
+
+
+  .AccouInfo { grid-area: AccouInfo; }
+  
+  .YourRes { grid-area: YourRes; }
+  
+  .orders { grid-area: orders; }
+  
+  .wishlist { grid-area: wishlist; }
+  
+  .paymentInfo { grid-area: paymentInfo; }
+  
+  .savedAdresses { grid-area: savedAdresses; }
+  
+  .accSec { grid-area: accSec; }
+  
+  .Notif { grid-area: Notif; }
+  
+  .Lang { grid-area: Lang; }
+  
+
+
