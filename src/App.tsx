@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       {changeH_F(<HeaderNav />, <TopPage />)}
-      <Suspense fallback={<SpinnerLoading/>}>
+      <Suspense fallback={<SpinnerLoading errorDescription="Hold on please"/>}>
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/Sign-in" element={<Login />}></Route>
