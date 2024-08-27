@@ -28,16 +28,23 @@
     font-family: "Lato", sans-serif;    
 }
 
-.form-row input, .form-row textarea{
+.avatar{
+    border: 2px solid red ; 
+    text-align: center;
+    background-image: url("/public/images/profile-backg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form-row input{
     padding: 4px 0;
     text-indent: 7px;
     min-width: 55%;
     color: #79040A;
 }
 
-.form-row textarea{
-    resize: none;
-}
+
 .save_changes{
     background-color: #79040A;
     padding: 15px 13px;
@@ -49,32 +56,20 @@
 }
 
 
-
-/* 
-
-@media (min-width:779px) {
-    .form-row label{
-        width: 35%;
+@media (max-width:651px) {
+    .user_data_container .form-row{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.3em;
+        padding-left:0 ;
     }
-    
-    
-}
-
-
-
-@media (min-width:599px) and (max-width:779px) {
-    .form-row{
+    .form-row input, .form-row label{
+        width: 100%;
+    }
+    .save_changes{
         display: flex;
-        gap: 5px;
-    
+        margin:1.5em auto;
     }
-    .form-row label{
-        width: 35%;
-    }
-    
     
 }
-
-@media (max-width:599px){
-    
-} */

@@ -11,7 +11,7 @@ export default function YourAccount() {
   return (  
         <div className='Your-Account-Container'>
             <div className='your_acc_Sub_Container'>
-                  <FaRegArrowAltCircleLeft onClick={()=> navigate(-1)} className='arrow' size={25}/> 
+                  <FaRegArrowAltCircleLeft onClick={()=> navigate("/dashboard")} className='arrow' size={25}/> 
                   <h2>  Your Account </h2>
             </div>      
         </div>

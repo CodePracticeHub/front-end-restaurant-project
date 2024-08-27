@@ -5,7 +5,7 @@ export const SpinnerLoading = ({errorDescription=""}) => {
     
     return (
         <div className='Loading-div' style={{height:"500px"}}>
-            <div className="loader"></div> 
+            <span className="loader"></span>
             <p>{errorDescription}</p>
             
         </div>

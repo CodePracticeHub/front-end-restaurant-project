@@ -7,9 +7,24 @@ import YourAccount from "../Profile_header/YourAccount.tsx"
 
 export default function AccouInfo() {   
     
-    // const {} = useGetUserHook()
+    // const {data , Loading , error, redirect} = useGetUserHook(url)
+
+    // useForm() catch the data
     
+    // wen user update the form 
+    // {} = updatUserHook({ oldData:oldData, updatedData:getValues })
     
+    // if (Loading){
+        // return spinner 
+    //}
+
+    // if (error){
+        // return error can't fetch data
+    //}
+
+     // if (redirect){
+        // navigate the user to log in page
+    //}
 
     return(
         <section>
@@ -17,8 +32,8 @@ export default function AccouInfo() {
             <div className="user_data_container">
                 <form >
 
-                    <div className="form-row" >
-                        <p>img AVATAR in process...</p>
+                    <div className="form-row avatar" >
+                        <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-male-circle.png" alt="user-male-circle"/>                    
                     </div>
 
                     <div className="form-row">
