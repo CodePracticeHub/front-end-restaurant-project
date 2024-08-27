@@ -21,10 +21,7 @@ export default function Login() {
   // Redirect user to Sign-up/forgot password Page
   function RedirectTo(eo) {
     const { id } = eo.target;
-
     const path = id === "signup" ? "/Sign-up" : "/Forget-password";
-    console.log(path);
-
     navigate(path);
   }
 
@@ -32,39 +29,47 @@ export default function Login() {
   const HandleForm = async (data: FieldValues) => {
     try {
       const URL = "http://localhost:8090/api/auth/signin";
-
       const response = await axios.post(URL, data);
 
-      // navigate the user to his profile or smt like that
-      setIsLoginSuccess(true);
-      setMessage("Login successful!");
-      setTimeout(() => {
-        setIsLoginSuccess(false);
-        setMessage("");
-        navigate("/dashboard"); // Redirect to dashboard upon successful login
-      }, 3000); // Reset success message after 3 seconds
+      // Log the response to verify the structure
+      console.log('Login response:', response);
 
-      // will clear the inputs in case submission went well
+      // Adjust the extraction based on the correct response structure
+      const token = response.data.accessToken; // Use accessToken instead of token
+      console.log('Received token:', token);
+
+      if (token) {
+        localStorage.setItem("token", token);
+        console.log('Token stored in localStorage:', localStorage.getItem('token'));
+
+        // Redirect to the dashboard after successful login
+        navigate("/dashboard");
+      } else {
+        console.error('No token found in response');
+        setMessage("Login failed. No token received.");
+      }
+
+      // Clear inputs after submission
       reset();
     } catch (error) {
-      console.log(error);
+      console.error('Error during login:', error);
       setMessage("An error occurred during login.");
     }
   };
+
 
   return (
       <div>
         <main className="main">
           <section className="main-section">
             <div className="form-part">
-              <h1> Login to Steakbuds</h1>
+              <h1>Login to Steakbuds</h1>
               <span className="span">
-              {" "}
-                Login to steakbuds to enter your details
+              Login to steakbuds to enter your details
             </span>
 
               <form onSubmit={handleSubmit(HandleForm)} className="form">
-                <label htmlFor="username"> Username</label>
+                <label htmlFor="username">Username</label>
                 <input
                     type="text"
                     id="username"
