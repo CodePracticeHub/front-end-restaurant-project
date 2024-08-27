@@ -5,15 +5,14 @@ import Footer from "./react-components/footer/footer.tsx";
 import Homepage from "./react-components/homepage/homepage.tsx";
 import { Routes, Route, useLocation } from "react-router-dom";
 // import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
-import Login from "./react-components/SignUp/Registration/Login.tsx";
-import Signup from "./react-components/SignUp/Registration/Signup.tsx";
-
 import GuestReservation from "./react-components/Guest-Reserv/GuestReservation.jsx";
 import { SpinnerLoading } from "./react-components/utils/SpinnerLoading.tsx";
+import TopPage from "./react-components/Top-and-Bottom-comp/TopPage.tsx";
+import BottomPage from "./react-components/Top-and-Bottom-comp/BottomPage.tsx";
 
 
-const TopPage = () => import("./react-components/Top-and-Bottom-comp/TopPage.tsx")
-const BottomPage = () => import("./react-components/Top-and-Bottom-comp/BottomPage.tsx")
+const Login = lazy(() => import("./react-components/SignUp/Registration/Login.tsx"))
+const Signup = lazy(() => import("./react-components/SignUp/Registration/Signup.tsx"))
 const UserDashboard = lazy(()=> import("./react-components/User_Profile/User-dash/UserDashboard.tsx"))
 const AccouInfo = lazy(()=> import("./react-components/User_Profile/Accountinformation/AccountInfo.tsx"))
 
