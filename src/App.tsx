@@ -7,12 +7,13 @@ import { Routes, Route, useLocation } from "react-router-dom";
 // import ReservationRev from "./react-components/ReservationReview/ReservationRev.tsx";
 import Login from "./react-components/SignUp/Registration/Login.tsx";
 import Signup from "./react-components/SignUp/Registration/Signup.tsx";
-import BottomPage from "./react-components/Top-and-Bottom-comp/BottomPage.tsx";
-import TopPage from "./react-components/Top-and-Bottom-comp/TopPage.tsx";
+
 import GuestReservation from "./react-components/Guest-Reserv/GuestReservation.jsx";
 import { SpinnerLoading } from "./react-components/utils/SpinnerLoading.tsx";
 
 
+const TopPage = () => import("./react-components/Top-and-Bottom-comp/TopPage.tsx")
+const BottomPage = () => import("./react-components/Top-and-Bottom-comp/BottomPage.tsx")
 const UserDashboard = lazy(()=> import("./react-components/User_Profile/User-dash/UserDashboard.tsx"))
 const AccouInfo = lazy(()=> import("./react-components/User_Profile/Accountinformation/AccountInfo.tsx"))
 
