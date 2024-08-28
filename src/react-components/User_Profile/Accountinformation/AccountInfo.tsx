@@ -112,13 +112,14 @@ export default function AccouInfo() {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
-    return (
+    return(
         <section>
-            <YourAccount />
+            <YourAccount/>
             <div className="user_data_container">
-                <form onSubmit={handleSubmit}>
-                    <div className="form-row">
-                        <p>img AVATAR in process...</p>
+                <form >
+
+                    <div className="form-row avatar" >
+                        <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/user-male-circle.png" alt="user-male-circle"/>
                     </div>
 
                     <div className="form-row">
