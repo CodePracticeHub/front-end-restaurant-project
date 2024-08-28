@@ -28,6 +28,14 @@
     font-family: "Lato", sans-serif;    
 }
 
+.avatar{
+    border: 2px solid red ;
+    text-align: center;
+    background-image: url("/public/images/profile-backg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .form-row input, .form-row textarea{
     padding: 4px 0;
     text-indent: 7px;
