@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  restweb:
+    build:
+      context: .  # The context is the root of the project
+      dockerfile: ./web/Dockerfile  # Correct path to the Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - front-tier
+      - back-tier
+    depends_on:
+      - backend
+
+  backend:
+    image: backend-restaurant-app  # This is your backend image name
+    ports:
+      - "8090:8090"  # Ensure this matches your backend setup
+    networks:
+      - back-tier
+
+networks:
+  front-tier: {}
+  back-tier:
+    external: true  # Ensure the backend network exists
