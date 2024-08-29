@@ -5,13 +5,13 @@ FROM node:16 AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY ../package*.json ./
+COPY package*.json ./
 
 # Install Node.js dependencies
 RUN npm install --legacy-peer-deps
 
 # Copy the rest of the application source code
-COPY ../ ./
+COPY . ./
 
 # Build the application for production
 RUN npm run build
@@ -26,7 +26,7 @@ COPY --from=build /app/build /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 
 # Copy your custom Nginx configuration file from the root directory
-COPY ../nginxrest.conf /etc/nginx/conf.d/restaurant.conf
+COPY nginxrest.conf /etc/nginx/conf.d/restaurant.conf
 
 # Expose port 80 to the outside world
 EXPOSE 80
